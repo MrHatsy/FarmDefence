@@ -100,6 +100,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb858379-b028-4482-ae68-c569a48a00be"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -157,6 +166,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6767642f-70e1-4bde-b144-d3fd9ef78e58"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +186,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // flying
         m_flying = asset.FindActionMap("flying", throwIfNotFound: true);
         m_flying_movement = m_flying.FindAction("movement", throwIfNotFound: true);
+        m_flying_interaction = m_flying.FindAction("interaction", throwIfNotFound: true);
     }
 
     ~@PlayerActions()
@@ -247,6 +268,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_flying;
     private List<IFlyingActions> m_FlyingActionsCallbackInterfaces = new List<IFlyingActions>();
     private readonly InputAction m_flying_movement;
+    private readonly InputAction m_flying_interaction;
     /// <summary>
     /// Provides access to input actions defined in input action map "flying".
     /// </summary>
@@ -262,6 +284,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "flying/movement".
         /// </summary>
         public InputAction @movement => m_Wrapper.m_flying_movement;
+        /// <summary>
+        /// Provides access to the underlying input action "flying/interaction".
+        /// </summary>
+        public InputAction @interaction => m_Wrapper.m_flying_interaction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -291,6 +317,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @movement.started += instance.OnMovement;
             @movement.performed += instance.OnMovement;
             @movement.canceled += instance.OnMovement;
+            @interaction.started += instance.OnInteraction;
+            @interaction.performed += instance.OnInteraction;
+            @interaction.canceled += instance.OnInteraction;
         }
 
         /// <summary>
@@ -305,6 +334,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @movement.started -= instance.OnMovement;
             @movement.performed -= instance.OnMovement;
             @movement.canceled -= instance.OnMovement;
+            @interaction.started -= instance.OnInteraction;
+            @interaction.performed -= instance.OnInteraction;
+            @interaction.canceled -= instance.OnInteraction;
         }
 
         /// <summary>
@@ -352,5 +384,12 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMovement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "interaction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteraction(InputAction.CallbackContext context);
     }
 }
