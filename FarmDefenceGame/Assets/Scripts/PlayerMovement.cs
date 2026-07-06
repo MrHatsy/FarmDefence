@@ -13,17 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private InputAction movementAction;
     private InputAction interactionAction;
     public bool haunted;
-
     public bool attackActive;
-    //private Soldier nearbySoldier;
     private List<Soldier> nearbySoldiers = new List<Soldier>();
-    private float hauntTimer;
-    
-
-    private List<Soldier> possessedSoldiers = new List<Soldier>();
-
-    //[SerializeField] private Collider2D playerCollider;
-    //[SerializeField] private Collider2D soldierCollider;
+    private List<Soldier> possessedSoldiers = new List<Soldier>(); // used to count active/haunted soldiers
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -53,10 +45,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         SoldierInteraction();
         Move();
-        //HandleHauntTimer();
     }
 
     public void Move()
@@ -68,13 +58,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void SoldierInteraction()
 {
-    if (!interactionAction.WasPressedThisFrame())
+    if (!interactionAction.WasPressedThisFrame()) // if I didnt interact, ignore this.
         return;
 
-    if (nearbySoldiers.Count == 0)
+    if (nearbySoldiers.Count == 0) // if there are no soldier near me, ignore this
         return;
 
-     HauntSoldier(nearbySoldiers[0]);
+    HauntSoldier(nearbySoldiers[0]); // haunt a solider
     Debug.Log("I pressed E to Haunt");
 }
 
@@ -83,32 +73,25 @@ private void HauntSoldier(Soldier newSoldier)
     if (possessedSoldiers.Contains(newSoldier))
         return;
 
-    if (possessedSoldiers.Count >= 2)
+    if (possessedSoldiers.Count >= 2) // if ive haunted 2 soldiers
     {
-        possessedSoldiers[0].isPossessed = false;
-        possessedSoldiers.RemoveAt(0);
+        possessedSoldiers[0].isPossessed = false; // the first one i haunted deactivates
+        possessedSoldiers.RemoveAt(0); // gets removed from my list
     }
 
-    possessedSoldiers.Add(newSoldier);
+    possessedSoldiers.Add(newSoldier); // add this new soldier into the list of possed ones
 
-    newSoldier.Possess(); 
+    newSoldier.Possess(); // this turns on the timer (lowkey only for the main attack)
 
     attackActive = true;
-    transform.position = newSoldier.transform.position;
+    transform.position = newSoldier.transform.position; // ghost snaps into center but can still move (just a temporary visual thing)
 }
-
-    // private void ReleaseSoldier()
-    // {
-    //     haunted = false;
-    //     if (nearbySoldier != null)
-    //     nearbySoldier.isPossessed = false;
-    // }
 
    private void OnTriggerEnter2D(Collider2D collision)
 {
-    if (collision.CompareTag("Soldier"))
+    if (collision.CompareTag("Soldier")) // if ghost collides with soldier
     {
-        Soldier s = collision.GetComponent<Soldier>();
+        Soldier s = collision.GetComponent<Soldier>(); // the soldier i collided with is now my nearby one
         if (!nearbySoldiers.Contains(s))
             nearbySoldiers.Add(s);
     }
@@ -116,39 +99,10 @@ private void HauntSoldier(Soldier newSoldier)
 
     private void OnTriggerExit2D(Collider2D collision)
 {
-    if (collision.CompareTag("Soldier"))
-    {
+    if (collision.CompareTag("Soldier")) // if ghost exits soldier collison
+        {
         Soldier s = collision.GetComponent<Soldier>();
-        nearbySoldiers.Remove(s);
-    }
-}
-
-//     private void HandleHauntTimer()
-// {
-//     if (possessedSoldiers.Count == 0)
-//     return;
-
-//     hauntTimer -= Time.deltaTime;
-//     Debug.Log("Haunt timer: " + hauntTimer);
-
-//     if (hauntTimer <= 0f)
-// {
-//     attackActive = false;
-
-//     for (int i = 0; i < possessedSoldiers.Count; i++)
-//     {
-//         possessedSoldiers[i].isPossessed = false;
-//     }
-
-//     possessedSoldiers.Clear();
-
-//     haunted = false;
-// }
-// }
-
-
-    private void CheckCollision()
-    {
-        // do somehting     
+        nearbySoldiers.Remove(s); // i forget the previous nearby ghost
+        }
     }
 }

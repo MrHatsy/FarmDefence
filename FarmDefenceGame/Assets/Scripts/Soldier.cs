@@ -5,16 +5,16 @@ public class Soldier : MonoBehaviour
     public bool isPossessed;
 
     public float possessionTimer;
-    public float possessionDuration = 15f;
+    public float possessionDuration = 10f;
 
     void Update()
     {
-        if (!isPossessed)
+        if (!isPossessed) // if im not possessed, ignore.
             return;
 
-        possessionTimer -= Time.deltaTime;
+        possessionTimer -= Time.deltaTime; // otherwise, start a countdown
 
-        if (possessionTimer <= 0f)
+        if (possessionTimer <= 0f) 
         {
             isPossessed = false;
         }
