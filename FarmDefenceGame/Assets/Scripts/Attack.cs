@@ -3,18 +3,25 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 { 
     [SerializeField] private Transform attack;
-    [SerializeField] private Vector3 targetScale = new Vector3(2f, 2f, 2f);
-    private float scaleSpeed = 0.03f;
-    private Vector3 maxScale = new Vector3(5f, 5f, 5f);
-    private PlayerMovement Player;
+    //[SerializeField] private Vector3 targetScale = new Vector3(4f, 4f, 4f);
+    //private float scaleSpeed = 0.03f;
+    private float resetCooldown = 1.5f; 
+    private float cooldownTimer = 0f;
+    
+    // private bool isResetting = false;
+    private Vector3 maxScale = new Vector3(8f, 8f, 8f);
+
+    //private PlayerMovement Player;
+    private Soldier soldier;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
-    {
-        Player = FindFirstObjectByType<PlayerMovement>();
-        attack.localScale = Vector3.zero;
-    }
+{
+    //Player = FindFirstObjectByType<PlayerMovement>();
+    soldier = GetComponentInParent<Soldier>();
+    attack.localScale = Vector3.zero;
+}
     void Start()
     {
         
@@ -26,13 +33,20 @@ public class Attack : MonoBehaviour
         AttackRadius();
     }
 
-    private void AttackRadius()
+   private void AttackRadius()
+{
+    if (!soldier.isPossessed)
     {
-        if (!Player.haunted)
-        {
-            return;
-        }
-        Vector3 nextScale = transform.localScale + new Vector3(0.01f, 0.01f, 0.01f);
-        transform.localScale = Vector3.Min(nextScale, maxScale);
+        attack.localScale = Vector3.zero;
+        return;
     }
+
+    Vector3 nextScale = attack.localScale + Vector3.one * 0.008f;
+    attack.localScale = Vector3.Min(nextScale, maxScale);
+
+    if (nextScale.x >= maxScale.x)
+    {
+        attack.localScale = Vector3.zero;
+    }
+}
 }

@@ -3,6 +3,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEditor.Media;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,7 +13,15 @@ public class PlayerMovement : MonoBehaviour
     private InputAction movementAction;
     private InputAction interactionAction;
     public bool haunted;
-    private Soldier nearbySoldier;
+
+    public bool attackActive;
+    //private Soldier nearbySoldier;
+    private List<Soldier> nearbySoldiers = new List<Soldier>();
+    private float hauntTimer;
+    
+
+    private List<Soldier> possessedSoldiers = new List<Soldier>();
+
     //[SerializeField] private Collider2D playerCollider;
     //[SerializeField] private Collider2D soldierCollider;
 
@@ -47,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         
         SoldierInteraction();
         Move();
+        //HandleHauntTimer();
     }
 
     public void Move()
@@ -57,52 +67,84 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void SoldierInteraction()
+{
+    if (!interactionAction.WasPressedThisFrame())
+        return;
+
+    if (nearbySoldiers.Count == 0)
+        return;
+
+     HauntSoldier(nearbySoldiers[0]);
+    Debug.Log("I pressed E to Haunt");
+}
+
+private void HauntSoldier(Soldier newSoldier)
+{
+    if (possessedSoldiers.Contains(newSoldier))
+        return;
+
+    if (possessedSoldiers.Count >= 2)
     {
-        if (!interactionAction.WasPressedThisFrame())
-            return;
-    
-        if (haunted)
-        {
-            ReleaseSoldier();
-            Debug.Log("I pressed E to release");
-        }
-        else if(nearbySoldier != null)
-        {
-            HauntSoldier();
-            Debug.Log("I pressed E to Haunt!");
-        }
+        possessedSoldiers[0].isPossessed = false;
+        possessedSoldiers.RemoveAt(0);
     }
 
-    private void HauntSoldier()
-    {
-        currentSpeed = 0;
-        haunted = true;
-        transform.position = nearbySoldier.transform.position;
-    }
+    possessedSoldiers.Add(newSoldier);
 
-    private void ReleaseSoldier()
-    {
-        haunted = false;
-        currentSpeed = 10;
-    }
+    newSoldier.Possess(); 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    attackActive = true;
+    transform.position = newSoldier.transform.position;
+}
+
+    // private void ReleaseSoldier()
+    // {
+    //     haunted = false;
+    //     if (nearbySoldier != null)
+    //     nearbySoldier.isPossessed = false;
+    // }
+
+   private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Soldier"))
     {
-        if (collision.CompareTag("Soldier"))
-        nearbySoldier = collision.GetComponent<Soldier>();
+        Soldier s = collision.GetComponent<Soldier>();
+        if (!nearbySoldiers.Contains(s))
+            nearbySoldiers.Add(s);
     }
+}
 
     private void OnTriggerExit2D(Collider2D collision)
+{
+    if (collision.CompareTag("Soldier"))
     {
-        if (collision.CompareTag("Soldier"))
-        {
-            if (nearbySoldier != null && collision.GetComponent<Soldier>() == nearbySoldier)
-            {
-                nearbySoldier = null;
-            }
-        }
-            
+        Soldier s = collision.GetComponent<Soldier>();
+        nearbySoldiers.Remove(s);
     }
+}
+
+//     private void HandleHauntTimer()
+// {
+//     if (possessedSoldiers.Count == 0)
+//     return;
+
+//     hauntTimer -= Time.deltaTime;
+//     Debug.Log("Haunt timer: " + hauntTimer);
+
+//     if (hauntTimer <= 0f)
+// {
+//     attackActive = false;
+
+//     for (int i = 0; i < possessedSoldiers.Count; i++)
+//     {
+//         possessedSoldiers[i].isPossessed = false;
+//     }
+
+//     possessedSoldiers.Clear();
+
+//     haunted = false;
+// }
+// }
 
 
     private void CheckCollision()

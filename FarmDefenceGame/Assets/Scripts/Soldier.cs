@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public bool isPossessed;
 
-    // Update is called once per frame
+    public float possessionTimer;
+    public float possessionDuration = 15f;
+
     void Update()
     {
-        
-    }  
+        if (!isPossessed)
+            return;
+
+        possessionTimer -= Time.deltaTime;
+
+        if (possessionTimer <= 0f)
+        {
+            isPossessed = false;
+        }
+    }
+
+    public void Possess()
+    {
+        isPossessed = true;
+        possessionTimer = possessionDuration;
+    }
 }
