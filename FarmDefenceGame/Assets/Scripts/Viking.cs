@@ -13,7 +13,7 @@ public class Viking : MonoBehaviour
 
     void Start()
     {
-
+        speed *= Random.Range(0.8f, 1.5f);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Viking : MonoBehaviour
     {
         //move toward target
         //add variance to the path by making the target randomly move a bit
-        Vector3 targetWithVariance = target.transform.position + new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+        Vector3 targetWithVariance = target.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), 0);
         direction = (targetWithVariance - this.transform.position);
         direction.z = 0;
         direction = direction.normalized;
@@ -48,7 +48,7 @@ public class Viking : MonoBehaviour
         }
     }
     
-    void OnTriggereEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == 7 && other.gameObject == target.gameObject)
         {

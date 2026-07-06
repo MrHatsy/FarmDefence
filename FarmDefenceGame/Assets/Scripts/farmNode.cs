@@ -33,11 +33,13 @@ public class FarmNode : MonoBehaviour
     public void addViking()
     {
         vikingCount++;
+        // Debug.Log("I gained a Viking! Now I have: " + vikingCount);
     }
 
-    public public void minusViking()
+    public void minusViking()
     {
         vikingCount--;
+        // Debug.Log("I lost a Viking... Now I have: " + vikingCount);
         if (vikingCount > 0)
         {
             vikingCount = 0;
@@ -57,7 +59,7 @@ public class FarmNode : MonoBehaviour
         if (alive == true)
         {
             timer -= Time.deltaTime;
-            if (timer >= 0)
+            if (timer <= 0)
             {
                 //gain points
                 myPointManager.addPoints();
@@ -65,7 +67,14 @@ public class FarmNode : MonoBehaviour
                 //take damage
                 if (vikingCount > 0)
                 {
-                    hp -= 1;    
+                    hp -= 1;
+                    Debug.Log("I'm hurt! My health is: " + hp);
+                }
+                //die if dead
+                if (hp <= 0)
+                {
+                    alive = false;
+                    this.SpriteRenderer.color(200, 100, 100);
                 }
 
                 //reset timer
