@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerActions actions;
     private InputAction movementAction;
     private InputAction interactionAction;
-    private bool active;
+    public bool haunted;
     private Soldier nearbySoldier;
     //[SerializeField] private Collider2D playerCollider;
     //[SerializeField] private Collider2D soldierCollider;
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         if (!interactionAction.WasPressedThisFrame())
             return;
     
-        if (active)
+        if (haunted)
         {
             ReleaseSoldier();
             Debug.Log("I pressed E to release");
@@ -76,13 +76,13 @@ public class PlayerMovement : MonoBehaviour
     private void HauntSoldier()
     {
         currentSpeed = 0;
-        active = true;
+        haunted = true;
         transform.position = nearbySoldier.transform.position;
     }
 
     private void ReleaseSoldier()
     {
-        active = false;
+        haunted = false;
         currentSpeed = 10;
     }
 

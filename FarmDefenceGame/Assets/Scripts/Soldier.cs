@@ -12,5 +12,5 @@ public class Soldier : MonoBehaviour
     void Update()
     {
         
-    }
+    }  
 }
