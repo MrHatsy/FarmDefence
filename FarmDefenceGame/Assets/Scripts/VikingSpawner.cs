@@ -28,7 +28,7 @@ public class VikingSpawner : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer <= 0)
         {
             //make a viking

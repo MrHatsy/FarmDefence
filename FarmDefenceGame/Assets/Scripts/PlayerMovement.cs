@@ -98,6 +98,10 @@ public class PlayerMovement : MonoBehaviour
     if (!interactionAction.WasPressedThisFrame()) // if I didnt interact, ignore this.
         return;
 
+         Debug.Log("Pressed interact!");
+
+    Debug.Log("Nearby soldiers: " + nearbySoldiers.Count);
+
     if (nearbySoldiers.Count == 0) // if there are no soldier near me, ignore this
         return;
 
@@ -110,6 +114,8 @@ private void HauntSoldier(Soldier newSoldier)
     if (possessedSoldiers.Contains(newSoldier))
         return;
 
+        Debug.Log("Possessing " + newSoldier.name);
+
     if (possessedSoldiers.Count >= 2) // if ive haunted 2 soldiers
     {
         possessedSoldiers[0].isPossessed = false; // the first one i haunted deactivates
@@ -119,6 +125,7 @@ private void HauntSoldier(Soldier newSoldier)
     possessedSoldiers.Add(newSoldier); // add this new soldier into the list of possed ones
 
     newSoldier.Possess(); // this turns on the timer (lowkey only for the main attack)
+    Debug.Log("Possess() called!");
 
     attackActive = true;
     transform.position = newSoldier.transform.position; // ghost snaps into center but can still move (just a temporary visual thing)
