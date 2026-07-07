@@ -100,6 +100,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb858379-b028-4482-ae68-c569a48a00be"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -157,6 +166,138 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""b067c9e0-5fba-4681-b730-0fe6be43d89b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c34d7dde-4aec-4621-9add-dddab37c7b40"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""830f4e12-9836-4d61-9c28-916b946a43b0"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""209df061-bd55-437d-8cf1-8f9d934097c8"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""14078e51-7f45-4ad3-8607-d2f459c2f794"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""c4a65442-c092-46dd-a6b9-f8b7b064ada1"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""072eac4a-70a8-40df-b45d-ea9e03550a23"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c395e256-e5c6-4aa7-8bb3-4768287bfc41"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""50e061bb-a62f-4737-ab09-3802d1199509"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""02e0ddf1-a5c0-4ee4-b342-f69e36a48703"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6767642f-70e1-4bde-b144-d3fd9ef78e58"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1729a5c-4492-4ca5-9d07-1463761c9adc"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +307,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // flying
         m_flying = asset.FindActionMap("flying", throwIfNotFound: true);
         m_flying_movement = m_flying.FindAction("movement", throwIfNotFound: true);
+        m_flying_interaction = m_flying.FindAction("interaction", throwIfNotFound: true);
     }
 
     ~@PlayerActions()
@@ -247,6 +389,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_flying;
     private List<IFlyingActions> m_FlyingActionsCallbackInterfaces = new List<IFlyingActions>();
     private readonly InputAction m_flying_movement;
+    private readonly InputAction m_flying_interaction;
     /// <summary>
     /// Provides access to input actions defined in input action map "flying".
     /// </summary>
@@ -262,6 +405,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "flying/movement".
         /// </summary>
         public InputAction @movement => m_Wrapper.m_flying_movement;
+        /// <summary>
+        /// Provides access to the underlying input action "flying/interaction".
+        /// </summary>
+        public InputAction @interaction => m_Wrapper.m_flying_interaction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -291,6 +438,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @movement.started += instance.OnMovement;
             @movement.performed += instance.OnMovement;
             @movement.canceled += instance.OnMovement;
+            @interaction.started += instance.OnInteraction;
+            @interaction.performed += instance.OnInteraction;
+            @interaction.canceled += instance.OnInteraction;
         }
 
         /// <summary>
@@ -305,6 +455,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @movement.started -= instance.OnMovement;
             @movement.performed -= instance.OnMovement;
             @movement.canceled -= instance.OnMovement;
+            @interaction.started -= instance.OnInteraction;
+            @interaction.performed -= instance.OnInteraction;
+            @interaction.canceled -= instance.OnInteraction;
         }
 
         /// <summary>
@@ -352,5 +505,12 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMovement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "interaction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteraction(InputAction.CallbackContext context);
     }
 }
