@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f677b09dd84aed049956e58608612f0a
+guid: 87dd7039bba97b844a8b06c29934d529
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5913957280546707561
-    second: IMG_1136_0
+      213: -5199515706832916427
+    second: Village_3 Game Jam_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_1136_0
+      name: Village_3 Game Jam_0
       rect:
         serializedVersion: 2
-        x: 1047
-        y: 622
-        width: 751
-        height: 458
+        x: 491
+        y: 125
+        width: 971
+        height: 722
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 797ad24df276deda0800000000000000
-      internalID: -5913957280546707561
+      spriteID: 530f82a430c97d7b0800000000000000
+      internalID: -5199515706832916427
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_1136_0: -5913957280546707561
+      Village_3 Game Jam_0: -5199515706832916427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
