@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private SpriteRenderer mySpriteRenderer;
     [SerializeField] private float currentSpeed = 5.0f;
     private Vector3 direction;
     private PlayerActions actions;
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         interactionAction = actions.flying.interaction;
         pauseAction = actions.flying.Pause;
         pauseAction.started += OnPause;
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
      void OnEnable()
@@ -77,7 +79,18 @@ public class PlayerMovement : MonoBehaviour
         {
             input.y = 0;
         }
-            direction = new Vector3(input.x, input.y, 0f);
+        direction = new Vector3(input.x, input.y, 0f);
+        if (Mathf.Abs(direction.normalized.x) > 0.5 )
+        {
+            if (direction.x > 0) //flip sprite depending on direction
+            {
+                mySpriteRenderer.flipX = false;
+            }
+            else
+            {
+                mySpriteRenderer.flipX = true;
+            }
+        }
         transform.Translate(direction * currentSpeed * Time.deltaTime, Space.World);
     }
 
