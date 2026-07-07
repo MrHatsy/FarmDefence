@@ -8,10 +8,12 @@ public class VikingSpawner : MonoBehaviour
     [SerializeField] private GameObject vikingPrefab;
     private Transform myPosition;
     private PointManager myPointManager;
+    [SerializeField] private int vikingHPDefault;
 
     //states (things that change)
     private float spawnRateCurr;
     private float timer;
+    private int vikingHP;
 
 
     void Start()
@@ -19,6 +21,7 @@ public class VikingSpawner : MonoBehaviour
         spawnRateCurr = spawnRateDefault;
         timer = spawnRateCurr;
         myPosition = this.gameObject.GetComponent<Transform>();
+        myPointManager = FindFirstObjectByType<PointManager>();
     }
 
     // Update is called once per frame
@@ -34,7 +37,14 @@ public class VikingSpawner : MonoBehaviour
                 myPosition.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0),
                 Quaternion.identity);
             newViking.GetComponent<Viking>().setTarget(target);
+            newViking.GetComponent<Viking>().setHP(vikingHP);
             timer = spawnRateCurr;
         }
+
+
+        //difficulty scaling
+        spawnRateCurr = spawnRateDefault - myPointManager.ProgessState.get(); //enemies will spawn faster
+        vikingHP = (myPointManager.ProgessState.get() + 1) / 2;
+        
     }
 }

@@ -3,12 +3,13 @@ using UnityEngine;
 public class Viking : MonoBehaviour
 {
     //params (vars that are set)
-    [SerializeField] private int hp;
+
     [SerializeField] private float speed;
-    
+
 
     //states (vars that change)
     private UnityEngine.Vector3 direction;
+    [SerializeField] private int hp;
     [SerializeField] private FarmNode target;
     private Vector3 targetPos; // has some randomness so they arent so robotic
 
@@ -16,7 +17,6 @@ public class Viking : MonoBehaviour
     {
         speed *= Random.Range(0.8f, 1.5f);
         setTarget(target);
-        myPointManager = FindFirstObjectByType<PointManager>();
     }
 
     // Update is called once per frame
@@ -75,11 +75,16 @@ public class Viking : MonoBehaviour
             hp--;
         }
     }
-    
+
     public void setTarget(FarmNode newTarget)
     {
         target = newTarget;
         targetPos = target.transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+    }
+
+    public void setHP(int spawnHP)
+    {
+        hp = spawnHP;
     }
 
 }
