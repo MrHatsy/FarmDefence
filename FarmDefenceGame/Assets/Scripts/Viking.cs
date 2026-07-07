@@ -6,6 +6,7 @@ public class Viking : MonoBehaviour
 
     [SerializeField] private float speed;
     private PointManager myPointManager;
+    private SpriteRenderer mySpriteRenderer;
 
     //states (vars that change)
     private UnityEngine.Vector3 direction;
@@ -18,6 +19,7 @@ public class Viking : MonoBehaviour
         speed *= Random.Range(0.8f, 1.5f);
         setTarget(target);
         myPointManager = FindFirstObjectByType<PointManager>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -45,8 +47,23 @@ public class Viking : MonoBehaviour
         Vector3 targetWithVariance = targetPos + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
         //makes them jitter on their target
         direction = (targetWithVariance - this.transform.position);
+
+        if (Mathf.Abs(direction.normalized.x) > 0.5 && direction.magnitude > 4)
+        {
+            if (direction.x > 0) //flip sprite depending on direction
+            {
+                mySpriteRenderer.flipX = true;
+            }
+            else
+            {
+                mySpriteRenderer.flipX = false;
+            }
+        }
+
         direction.z = 0;
         direction = direction.normalized;
+        
+        
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
