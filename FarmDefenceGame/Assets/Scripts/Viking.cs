@@ -10,7 +10,7 @@ public class Viking : MonoBehaviour
 
     //states (vars that change)
     private UnityEngine.Vector3 direction;
-    [SerializeField] private int hp;
+    private int hp;
     [SerializeField] private FarmNode target;
     private Vector3 targetPos; // has some randomness so they arent so robotic
 

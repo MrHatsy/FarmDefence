@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8f76fdbfcf161684b82f7c5cfe7cc83e
+guid: 21eb2dd39761e984eb3bb0b96485b7e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2830071645898275730
-    second: Statue_0
-  - first:
-      213: 130561695280464317
-    second: Statue_1
+      213: 1508873090361399164
+    second: Statue.png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,33 +152,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Statue_0
+      name: Statue.png_0
       rect:
         serializedVersion: 2
-        x: 1423
-        y: 1047
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e64045915d099b8d0800000000000000
-      internalID: -2830071645898275730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Statue_1
-      rect:
-        serializedVersion: 2
-        x: 742
-        y: 50
+        x: 134
+        y: 16
         width: 490
         height: 917
       alignment: 0
@@ -192,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db1077c8b29dfc100800000000000000
-      internalID: 130561695280464317
+      spriteID: c771322d41890f410800000000000000
+      internalID: 1508873090361399164
       vertices: []
       indices: 
       edges: []
@@ -212,8 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Statue_0: -2830071645898275730
-      Statue_1: 130561695280464317
+      Statue.png_0: 1508873090361399164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
