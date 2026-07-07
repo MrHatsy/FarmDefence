@@ -93,7 +93,7 @@ public class FarmNode : MonoBehaviour
     {
         if (vikingCount > 0)
         {
-            hp -= (vikingCount) / 2; //every two vikings does an extra damage
+            hp -= (vikingCount) / 2; //every two vikings does a damage
             // Debug.Log("I'm hurt! My health is: " + hp);
         }
         //die if dead
@@ -117,15 +117,15 @@ public class FarmNode : MonoBehaviour
             mySpriteRenderer.sprite = sprite4;
             mySpriteRenderer.color = Color.gray;
         }
-        else if ((float)hp <= (float)hpMax * 0.1f)
+        else if ((float)hp <= (float)hpMax * 0.25f)
         {
             mySpriteRenderer.sprite = sprite4;
         }
-        else if ((float)hp <= (float)hpMax * 0.4f)
+        else if ((float)hp <= (float)hpMax * 0.5f)
         {
             mySpriteRenderer.sprite = sprite3;
         }
-        else if ((float)hp <= (float)hpMax * 0.7f)
+        else if ((float)hp <= (float)hpMax * 0.75f)
         {
             mySpriteRenderer.sprite = sprite2;
         }
