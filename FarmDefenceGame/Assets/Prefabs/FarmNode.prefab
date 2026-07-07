@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3752690255289750320}
   - component: {fileID: 108146812244221143}
   - component: {fileID: 8229915856336622011}
-  - component: {fileID: 935351720657056451}
   - component: {fileID: 8027243434111658561}
+  - component: {fileID: 583895317473965382}
   m_Layer: 7
   m_Name: FarmNode
   m_TagString: Untagged
@@ -156,22 +156,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &935351720657056451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2915705587677340116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dca3959e3ba0bb4da24dd4b45ac7ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::farmNode
-  timerMax: 2
-  nextNode: {fileID: 0}
-  hp: 10
-  alive: 1
 --- !u!50 &8027243434111658561
 Rigidbody2D:
   serializedVersion: 5
@@ -199,3 +183,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &583895317473965382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915705587677340116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dca3959e3ba0bb4da24dd4b45ac7ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FarmNode
+  timerMax: 2
+  nextNode: {fileID: 0}
+  hp: 10
+  alive: 0

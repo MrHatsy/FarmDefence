@@ -21,11 +21,7 @@ public class Viking : MonoBehaviour
     {
         //move toward target
         //add variance to the path by making the target randomly move a bit
-        Vector3 targetWithVariance = target.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), 0);
-        direction = (targetWithVariance - this.transform.position);
-        direction.z = 0;
-        direction = direction.normalized;
-        transform.Translate(direction * speed * Time.deltaTime);
+        movement();
 
         //if hp <=0 , i am dead
         if (hp <= 0)
@@ -33,6 +29,15 @@ public class Viking : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+    }
+
+    void movement()
+    {
+        Vector3 targetWithVariance = target.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), 0);
+        direction = (targetWithVariance - this.transform.position);
+        direction.z = 0;
+        direction = direction.normalized;
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
     void OnTriggerStay2D(Collider2D other)

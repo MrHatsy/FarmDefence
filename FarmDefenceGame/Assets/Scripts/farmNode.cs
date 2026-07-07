@@ -6,6 +6,7 @@ public class FarmNode : MonoBehaviour
     private float timer; //for scoring and taking damage
     [SerializeField] private FarmNode nextNode;
     private PointManager myPointManager;
+    private SpriteRenderer mySpriteRenderer;
 
     //states
     [SerializeField] private int hp;
@@ -51,6 +52,7 @@ public class FarmNode : MonoBehaviour
     void Start()
     {
         myPointManager = FindFirstObjectByType<PointManager>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -65,21 +67,26 @@ public class FarmNode : MonoBehaviour
                 myPointManager.addPoints();
 
                 //take damage
-                if (vikingCount > 0)
-                {
-                    hp -= 1;
-                    Debug.Log("I'm hurt! My health is: " + hp);
-                }
-                //die if dead
-                if (hp <= 0)
-                {
-                    alive = false;
-                    this.SpriteRenderer.color(200, 100, 100);
-                }
+                takeDamage();
 
                 //reset timer
                 timer = timerMax;
             }            
+        }
+    }
+
+    void takeDamage()
+    {
+        if (vikingCount > 0)
+        {
+            hp -= (vikingCount + 1) / 2; //every two vikings does an extra damage
+            Debug.Log("I'm hurt! My health is: " + hp);
+        }
+        //die if dead
+        if (hp <= 0)
+        {
+            alive = false;
+            mySpriteRenderer.color = Color.red;
         }
     }
 
