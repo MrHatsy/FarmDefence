@@ -57,7 +57,11 @@ public class CapsuleAttack : MonoBehaviour
         {
             active = false;
             attackTimer = 0f;
-            repeatTimer = 0f; 
+            repeatTimer = 0f;
+            if (PlayerMovement.possessedSoldiers.Count > 0)
+            {
+                PlayerMovement.possessedSoldiers.Remove(soldier);
+            }
             return;
         }
 
