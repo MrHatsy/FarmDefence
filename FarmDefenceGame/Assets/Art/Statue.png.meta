@@ -1,31 +1,13 @@
 fileFormatVersion: 2
-guid: 5436c9c922ca714409009f43a7d0c932
+guid: 8f76fdbfcf161684b82f7c5cfe7cc83e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8473582897597669911
-    second: IMG_1131_0
+      213: -2830071645898275730
+    second: Statue_0
   - first:
-      213: -3657459616073775529
-    second: IMG_1131_1
-  - first:
-      213: 4068758255882652836
-    second: IMG_1131_2
-  - first:
-      213: -950576070129641771
-    second: IMG_1131_3
-  - first:
-      213: -4468488098964707861
-    second: IMG_1131_4
-  - first:
-      213: -4780734406637349227
-    second: IMG_1131_5
-  - first:
-      213: 3356745417108402696
-    second: IMG_1131_6
-  - first:
-      213: 5609006100456707357
-    second: IMG_1131_7
+      213: 130561695280464317
+    second: Statue_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,165 +155,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_1131_0
+      name: Statue_0
       rect:
         serializedVersion: 2
-        x: 774
-        y: 936
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 712622a10c6389570800000000000000
-      internalID: 8473582897597669911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_1
-      rect:
-        serializedVersion: 2
-        x: 808
-        y: 929
-        width: 63
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75606937bd71e3dc0800000000000000
-      internalID: -3657459616073775529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_2
-      rect:
-        serializedVersion: 2
-        x: 773
-        y: 887
-        width: 8
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4acc2d69312277830800000000000000
-      internalID: 4068758255882652836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_3
-      rect:
-        serializedVersion: 2
-        x: 861
-        y: 896
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d69fefb910eec2f0800000000000000
-      internalID: -950576070129641771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_4
-      rect:
-        serializedVersion: 2
-        x: 846
-        y: 872
-        width: 20
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be5e522cfbdbcf1c0800000000000000
-      internalID: -4468488098964707861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_5
-      rect:
-        serializedVersion: 2
-        x: 587
-        y: 391
-        width: 402
-        height: 467
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59694e6f26b67adb0800000000000000
-      internalID: -4780734406637349227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_6
-      rect:
-        serializedVersion: 2
-        x: 838
-        y: 851
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 802ba2c0c2e859e20800000000000000
-      internalID: 3356745417108402696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_1131_7
-      rect:
-        serializedVersion: 2
-        x: 1192
-        y: 599
+        x: 1423
+        y: 1047
         width: 7
         height: 8
       alignment: 0
@@ -342,8 +170,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1598b0a45137dd40800000000000000
-      internalID: 5609006100456707357
+      spriteID: e64045915d099b8d0800000000000000
+      internalID: -2830071645898275730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Statue_1
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 50
+        width: 490
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1077c8b29dfc100800000000000000
+      internalID: 130561695280464317
       vertices: []
       indices: 
       edges: []
@@ -362,14 +212,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_1131_0: 8473582897597669911
-      IMG_1131_1: -3657459616073775529
-      IMG_1131_2: 4068758255882652836
-      IMG_1131_3: -950576070129641771
-      IMG_1131_4: -4468488098964707861
-      IMG_1131_5: -4780734406637349227
-      IMG_1131_6: 3356745417108402696
-      IMG_1131_7: 5609006100456707357
+      Statue_0: -2830071645898275730
+      Statue_1: 130561695280464317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
