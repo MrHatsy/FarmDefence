@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private InputAction interactionAction;
     public bool haunted;
     public bool attackActive;
-    private List<Soldier> nearbySoldiers = new List<Soldier>();
-    private List<Soldier> possessedSoldiers = new List<Soldier>(); // used to count active/haunted soldiers
+    public static List<Soldier> nearbySoldiers = new List<Soldier>();
+    public static List<Soldier> possessedSoldiers = new List<Soldier>(); // used to count active/haunted soldiers
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     {
         SoldierInteraction();
         Move();
+
+        Debug.Log(possessedSoldiers.Count );
     }
 
     public void Move()

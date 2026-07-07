@@ -16,6 +16,10 @@ public class Soldier : MonoBehaviour
 
         if (possessionTimer <= 0f) 
         {
+            if (PlayerMovement.possessedSoldiers.Count > 0)
+            {
+                PlayerMovement.possessedSoldiers.Remove(this);
+            }
             isPossessed = false;
         }
     }

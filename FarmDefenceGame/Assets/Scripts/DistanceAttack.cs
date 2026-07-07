@@ -47,15 +47,19 @@ public class DistanceAttack : MonoBehaviour
         {
             currentScale = Vector3.zero;
             attack.localScale = currentScale;
+            if (PlayerMovement.possessedSoldiers.Count > 0)
+            {
+                PlayerMovement.possessedSoldiers.Remove(soldier);
+            }
             return;
         }
 
         
         attack.Rotate(0f, 0f, spinSpeed * Time.deltaTime); // spins the attack sprite
 
-        
-        currentScale = Vector3.Lerp(currentScale, targetScale, Time.deltaTime * 2); // naturally stops
-        attack.localScale = currentScale; // size to 0.
+
+        currentScale = Vector3.Lerp(currentScale, targetScale, Time.deltaTime * 2); // naturally starts
+        attack.localScale = currentScale; 
     }
 
     void OnTriggerStay2D(Collider2D collider)
