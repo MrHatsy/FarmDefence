@@ -101,6 +101,7 @@ public class FarmNode : MonoBehaviour
         if (hp <= 0)
         {
             alive = false;
+            myPointManager.CheckFarms();
             // mySpriteRenderer.color = Color.red;
         }
     }

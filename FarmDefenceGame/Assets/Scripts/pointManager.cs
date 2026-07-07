@@ -12,6 +12,8 @@ public class PointManager : MonoBehaviour
 
     [SerializeField] private GameObject WinPanel;
 
+        [SerializeField] private GameObject LosePanel;
+
     //changings
     private int points;
     private static int progessState = 1;
@@ -84,4 +86,26 @@ public class PointManager : MonoBehaviour
         }
         
     }
+
+    public void CheckFarms()
+{
+    FarmNode[] farms = FindObjectsByType<FarmNode>(FindObjectsSortMode.None);
+
+    foreach (FarmNode farm in farms)
+    {
+        if (farm.AmIAlive)
+        {
+            return;
+        }
+    }
+
+    LoseGame();
+}
+
+void LoseGame()
+{
+    Debug.Log("YOU LOSE!");
+    LosePanel.SetActive(true);
+    Time.timeScale = 0f;
+}
 }
