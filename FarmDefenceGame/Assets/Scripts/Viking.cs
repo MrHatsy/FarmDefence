@@ -5,7 +5,7 @@ public class Viking : MonoBehaviour
     //params (vars that are set)
 
     [SerializeField] private float speed;
-
+    private PointManager myPointManager;
 
     //states (vars that change)
     private UnityEngine.Vector3 direction;
@@ -17,6 +17,7 @@ public class Viking : MonoBehaviour
     {
         speed *= Random.Range(0.8f, 1.5f);
         setTarget(target);
+        myPointManager = FindFirstObjectByType<PointManager>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,11 @@ public class Viking : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        //if we win, all vikings die
+        if (myPointManager.ProgessState >= 5)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void movement()

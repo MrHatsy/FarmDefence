@@ -45,6 +45,12 @@ public class VikingSpawner : MonoBehaviour
         //difficulty scaling
         spawnRateCurr = spawnRateDefault - myPointManager.ProgessState; //enemies will spawn faster
         vikingHP = (myPointManager.ProgessState + 1) / 2;
+
+        //stop spawning if we win
+        if (myPointManager.ProgessState >= 5)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
 }
