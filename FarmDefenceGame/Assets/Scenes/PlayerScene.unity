@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 323007981}
   - component: {fileID: 323007982}
   - component: {fileID: 323007983}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DistanceAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +400,7 @@ MonoBehaviour:
   attack: {fileID: 323007981}
   duration: 10
   spinSpeed: 150
+  strength: 10
 --- !u!1 &406346083
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +412,7 @@ GameObject:
   - component: {fileID: 406346084}
   - component: {fileID: 406346086}
   - component: {fileID: 406346085}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attack
   attack: {fileID: 406346084}
+  strength: 10
 --- !u!212 &406346086
 SpriteRenderer:
   serializedVersion: 2
@@ -953,7 +955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945123809}
   - component: {fileID: 945123812}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CapsuleAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,6 +994,7 @@ MonoBehaviour:
   force: 6
   repeatDelay: 3
   duration: 10
+  strength: 10
 --- !u!1 &1998910350
 GameObject:
   m_ObjectHideFlags: 0

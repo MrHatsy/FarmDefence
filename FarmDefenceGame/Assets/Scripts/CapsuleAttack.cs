@@ -57,7 +57,7 @@ public class CapsuleAttack : MonoBehaviour
         {
             active = false;
             attackTimer = 0f;
-            repeatTimer = 0f; // all resets
+            repeatTimer = 0f; 
             return;
         }
 
@@ -73,6 +73,8 @@ public class CapsuleAttack : MonoBehaviour
         for (int i = 0; i < 3; i++) // three bullets
         {
             GameObject c = Instantiate(capsulePrefab, spawnPoint.position, Quaternion.identity); // spawns bulllets
+
+            Destroy(c, 3f);
 
             Rigidbody2D rb = c.GetComponent<Rigidbody2D>();
             if (rb != null)
