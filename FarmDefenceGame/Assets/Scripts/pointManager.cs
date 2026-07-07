@@ -24,6 +24,14 @@ public class PointManager : MonoBehaviour
         }
     }
 
+    public int Points
+    {
+        get
+        {
+            return points;
+        }
+    }
+
     void Start()
     {
         points = 0;
