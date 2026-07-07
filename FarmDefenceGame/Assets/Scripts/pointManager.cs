@@ -2,9 +2,21 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
-    private int points;
+    //constants
+    [SerializeField] private int pointMilestone; 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //changings
+    private int points;
+    private int progessState = 1;
+
+    public int ProgessState
+    {
+        get
+        {
+            return progessState;
+        }
+    }
+
     void Start()
     {
         points = 0;
@@ -13,7 +25,20 @@ public class PointManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Points: " + points);
+
+        if (points >= pointMilestone * progessState)
+        {
+            progessState++;
+        }
+
+        if (progessState >= 4)
+        {
+            //TODO
+            //WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN
+            //WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN
+            //WIN
+        }
     }
 
     public void addPoints(){
