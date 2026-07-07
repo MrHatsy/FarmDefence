@@ -7,14 +7,15 @@ using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private SpriteRenderer mySpriteRenderer;
     [SerializeField] private float currentSpeed = 5.0f;
     private Vector3 direction;
     private PlayerActions actions;
     private InputAction movementAction;
     private InputAction interactionAction;
+    private InputAction pauseAction;
     public bool haunted;
     public bool attackActive;
+    public bool movementEnabled;
     public static List<Soldier> nearbySoldiers = new List<Soldier>();
     public static List<Soldier> possessedSoldiers = new List<Soldier>(); // used to count active/haunted soldiers
 
@@ -25,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
         actions = new PlayerActions();
         movementAction = actions.flying.movement;
         interactionAction = actions.flying.interaction;
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        pauseAction = actions.flying.Pause;
+        pauseAction.started += OnPause;
     }
 
      void OnEnable()
@@ -75,19 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
             input.y = 0;
         }
-        direction = new Vector3(input.x, input.y, 0f);
-
-        if (Mathf.Abs(direction.normalized.x) > 0.5 )
-        {
-            if (direction.x > 0) //flip sprite depending on direction
-            {
-                mySpriteRenderer.flipX = false;
-            }
-            else
-            {
-                mySpriteRenderer.flipX = true;
-            }
-        }
+            direction = new Vector3(input.x, input.y, 0f);
         transform.Translate(direction * currentSpeed * Time.deltaTime, Space.World);
     }
 
@@ -138,6 +128,19 @@ private void HauntSoldier(Soldier newSoldier)
         {
         Soldier s = collision.GetComponent<Soldier>();
         nearbySoldiers.Remove(s); // i forget the previous nearby ghost
+        }
+    }
+
+    private void OnPause(InputAction.CallbackContext context)
+    {
+        movementEnabled = !movementEnabled;
+        if (movementEnabled)
+        {
+            movementAction.Enable();
+        }
+        else
+        {
+            movementAction.Disable();
         }
     }
 }
