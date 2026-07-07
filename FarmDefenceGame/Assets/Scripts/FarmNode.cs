@@ -93,8 +93,8 @@ public class FarmNode : MonoBehaviour
     {
         if (vikingCount > 0)
         {
-            hp -= (vikingCount + 1) / 2; //every two vikings does an extra damage
-            Debug.Log("I'm hurt! My health is: " + hp);
+            hp -= (vikingCount) / 2; //every two vikings does an extra damage
+            // Debug.Log("I'm hurt! My health is: " + hp);
         }
         //die if dead
         if (hp <= 0)

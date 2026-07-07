@@ -51,7 +51,7 @@ public class PointManager : MonoBehaviour
 
     public void addPoints()
     {
-        points += 10;
+        points += 1;
     }
     
     void updateSprite()

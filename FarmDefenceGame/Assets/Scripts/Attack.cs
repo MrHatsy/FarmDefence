@@ -4,7 +4,7 @@ public class Attack : MonoBehaviour
 { 
     [SerializeField] private Transform attack;
 
-    private Vector3 maxScale = new Vector3(8f, 8f, 8f); // max size of attack, can be changed :)
+    private Vector3 maxScale = new Vector3(24f, 24f, 24f); // max size of attack, can be changed :)
     private Soldier soldier;
 
     // [SerializeField] private float strength = 10f; //Damage Strength

@@ -81,11 +81,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (direction.x > 0) //flip sprite depending on direction
             {
-                mySpriteRenderer.flipX = true;
+                mySpriteRenderer.flipX = false;
             }
             else
             {
-                mySpriteRenderer.flipX = false;
+                mySpriteRenderer.flipX = true;
             }
         }
         transform.Translate(direction * currentSpeed * Time.deltaTime, Space.World);
