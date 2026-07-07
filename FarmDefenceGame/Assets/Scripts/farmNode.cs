@@ -62,11 +62,13 @@ public class FarmNode : MonoBehaviour
         hp = hpMax;
         myPointManager = FindFirstObjectByType<PointManager>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        updateSprite();
     }
 
     // Update is called once per frame
     void Update()
     {
+        updateSprite();
         if (alive == true)
         {
             timer -= Time.deltaTime;
@@ -82,7 +84,7 @@ public class FarmNode : MonoBehaviour
                 timer = timerMax;
 
                 //update sprite
-                updateSprite();
+
             }
         }
     }
@@ -110,20 +112,20 @@ public class FarmNode : MonoBehaviour
     void updateSprite()
     {
 
-        if (hp <= hp * 0f)
+        if ((float)hp <= (float)hpMax * 0f)
         {
             mySpriteRenderer.sprite = sprite4;
-            mySpriteRenderer.color = Color.DarkSlateGray;
+            mySpriteRenderer.color = Color.gray;
         }
-        else if (hp <= hp * 0.1f)
+        else if ((float)hp <= (float)hpMax * 0.1f)
         {
             mySpriteRenderer.sprite = sprite4;
         }
-        else if (hp <= hp * 0.4)
+        else if ((float)hp <= (float)hpMax * 0.4f)
         {
             mySpriteRenderer.sprite = sprite3;
         }
-        else if (hp <= hp * 0.7)
+        else if ((float)hp <= (float)hpMax * 0.7f)
         {
             mySpriteRenderer.sprite = sprite2;
         }

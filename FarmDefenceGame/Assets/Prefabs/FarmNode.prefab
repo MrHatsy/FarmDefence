@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4150543317946932746, guid: 325b7e066bac8ba4286c07486e8814e1, type: 3}
-  m_Color: {r: 0.38431373, g: 0.43137255, b: 0.5254902, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -154,7 +154,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 3}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!50 &8027243434111658561
 Rigidbody2D:
@@ -198,7 +198,7 @@ MonoBehaviour:
   timerMax: 2
   nextNode: {fileID: 0}
   verticalFarm: 0
-  hpMax: 0
+  hpMax: 10
   alive: 0
   sprite1: {fileID: -4150543317946932746, guid: 325b7e066bac8ba4286c07486e8814e1, type: 3}
   sprite2: {fileID: 283151135742448952, guid: e4c69490ef8c69a4ebf08c70aca6d1c6, type: 3}
