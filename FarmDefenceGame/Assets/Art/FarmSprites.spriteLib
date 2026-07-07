@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: farm
+    m_Hash: 404148293
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Farm1a_0
+      m_Hash: 438371200
+      m_Sprite: {fileID: -4150543317946932746, guid: 325b7e066bac8ba4286c07486e8814e1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4150543317946932746, guid: 325b7e066bac8ba4286c07486e8814e1, type: 3}
+    - m_Name: Farm1b_0
+      m_Hash: 409451993
+      m_Sprite: {fileID: 283151135742448952, guid: e4c69490ef8c69a4ebf08c70aca6d1c6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 283151135742448952, guid: e4c69490ef8c69a4ebf08c70aca6d1c6, type: 3}
+    - m_Name: Farm1c_0
+      m_Hash: 430299118
+      m_Sprite: {fileID: 6055469089548957462, guid: ef0a26ad9448b3d47bdb9f52bdf17074, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6055469089548957462, guid: ef0a26ad9448b3d47bdb9f52bdf17074, type: 3}
+    - m_Name: Farm1d_0
+      m_Hash: 485146987
+      m_Sprite: {fileID: -36607725429801198, guid: 70eb69d2ee9708e48b326feef590824a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -36607725429801198, guid: 70eb69d2ee9708e48b326feef590824a, type: 3}
+    - m_Name: Farm1d_1
+      m_Hash: 737014269
+      m_Sprite: {fileID: -3891550341491511791, guid: 70eb69d2ee9708e48b326feef590824a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3891550341491511791, guid: 70eb69d2ee9708e48b326feef590824a, type: 3}
+    - m_Name: Farm2a_0
+      m_Hash: 143961198
+      m_Sprite: {fileID: -807277303452023893, guid: 2d26c6c4558850441a276d67e5f6a388, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -807277303452023893, guid: 2d26c6c4558850441a276d67e5f6a388, type: 3}
+    - m_Name: Farm2a_1
+      m_Hash: 1066638584
+      m_Sprite: {fileID: 5846540925768351106, guid: 2d26c6c4558850441a276d67e5f6a388, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5846540925768351106, guid: 2d26c6c4558850441a276d67e5f6a388, type: 3}
+    - m_Name: Farm2b_0
+      m_Hash: 181539383
+      m_Sprite: {fileID: -552132065792432564, guid: facfaa239ac55a0419e351fcba9fc4b8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -552132065792432564, guid: facfaa239ac55a0419e351fcba9fc4b8, type: 3}
+    - m_Name: Farm2b_1
+      m_Hash: 1037378209
+      m_Sprite: {fileID: -8268598801606622851, guid: facfaa239ac55a0419e351fcba9fc4b8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8268598801606622851, guid: facfaa239ac55a0419e351fcba9fc4b8, type: 3}
+    - m_Name: Farm2c_0
+      m_Hash: 185628672
+      m_Sprite: {fileID: 3545406477511161191, guid: 1d05d5ccfff552047ad3b6ec2f700e57, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3545406477511161191, guid: 1d05d5ccfff552047ad3b6ec2f700e57, type: 3}
+    - m_Name: Farm2c_1
+      m_Hash: 1008158870
+      m_Sprite: {fileID: -4854539390885251038, guid: 1d05d5ccfff552047ad3b6ec2f700e57, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4854539390885251038, guid: 1d05d5ccfff552047ad3b6ec2f700e57, type: 3}
+    - m_Name: farm2d_0
+      m_Hash: 925437139
+      m_Sprite: {fileID: 75881218919237358, guid: 790a3ece8c7ea8b42a728c2a0afbe004, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 75881218919237358, guid: 790a3ece8c7ea8b42a728c2a0afbe004, type: 3}
+    - m_Name: farm2d_1
+      m_Hash: 3030085
+      m_Sprite: {fileID: -1578733590419010487, guid: 790a3ece8c7ea8b42a728c2a0afbe004, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1578733590419010487, guid: 790a3ece8c7ea8b42a728c2a0afbe004, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 13
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639190286244482711
+  m_Version: 1

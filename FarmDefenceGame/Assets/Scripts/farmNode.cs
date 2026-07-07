@@ -5,13 +5,21 @@ public class FarmNode : MonoBehaviour
     [SerializeField] private float timerMax;
     private float timer; //for scoring and taking damage
     [SerializeField] private FarmNode nextNode;
+    [SerializeField] private bool verticalFarm;
     private PointManager myPointManager;
     private SpriteRenderer mySpriteRenderer;
+    [SerializeField] private int hpMax;
 
     //states
-    [SerializeField] private int hp;
+    private int hp;
     private int vikingCount;
     [SerializeField] private bool alive;
+
+    //sprites
+    [SerializeField] private Sprite sprite1;
+    [SerializeField] private Sprite sprite2;
+    [SerializeField] private Sprite sprite3;
+    [SerializeField] private Sprite sprite4;
 
 
     //properties
@@ -51,6 +59,7 @@ public class FarmNode : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        hp = hpMax;
         myPointManager = FindFirstObjectByType<PointManager>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -71,7 +80,10 @@ public class FarmNode : MonoBehaviour
 
                 //reset timer
                 timer = timerMax;
-            }            
+
+                //update sprite
+                updateSprite();
+            }
         }
     }
 
@@ -86,12 +98,38 @@ public class FarmNode : MonoBehaviour
         if (hp <= 0)
         {
             alive = false;
-            mySpriteRenderer.color = Color.red;
+            // mySpriteRenderer.color = Color.red;
         }
     }
 
     FarmNode getNextNode()
     {
         return nextNode;
+    }
+
+    void updateSprite()
+    {
+
+        if (hp <= hp * 0f)
+        {
+            mySpriteRenderer.sprite = sprite4;
+            mySpriteRenderer.color = Color.DarkSlateGray;
+        }
+        else if (hp <= hp * 0.1f)
+        {
+            mySpriteRenderer.sprite = sprite4;
+        }
+        else if (hp <= hp * 0.4)
+        {
+            mySpriteRenderer.sprite = sprite3;
+        }
+        else if (hp <= hp * 0.7)
+        {
+            mySpriteRenderer.sprite = sprite2;
+        }
+        else
+        {
+            mySpriteRenderer.sprite = sprite1;
+        }
     }
 }

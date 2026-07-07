@@ -38,7 +38,7 @@ public class VikingSpawner : MonoBehaviour
                 Quaternion.identity);
             newViking.GetComponent<Viking>().setTarget(target);
             newViking.GetComponent<Viking>().setHP(vikingHP);
-            timer = spawnRateCurr;
+            timer = spawnRateCurr * Random.Range(0.9f, 1.2f);
         }
 
 
