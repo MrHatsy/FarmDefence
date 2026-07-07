@@ -107,3 +107,4 @@ MonoBehaviour:
   spawnRateDefault: 3
   target: {fileID: 0}
   vikingPrefab: {fileID: 7302842908267939607, guid: 6ce9a5a77dd643446867e8ac96b003f0, type: 3}
+  vikingHPDefault: 1

@@ -5,7 +5,7 @@ public class DistanceAttack : MonoBehaviour
     [SerializeField] private Transform attack;
     [SerializeField] private float duration = 10f; // how long are we spinning for
     [SerializeField] private float spinSpeed = 100f; // how FAST do we spin...duh.
-    [SerializeField] private float strength = 10f; //Damage Strength
+    // [SerializeField] private float strength = 10f; //Damage Strength
 
     private float timer;
 

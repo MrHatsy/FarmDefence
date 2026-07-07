@@ -33,7 +33,7 @@ public class PointManager : MonoBehaviour
     {
         updateSprite();
 
-        Debug.Log("Points: " + points +", Milestone: " + pointMilestone);
+        // Debug.Log("Points: " + points +", Milestone: " + pointMilestone);
 
         if (points >= pointMilestone * progessState)
         {

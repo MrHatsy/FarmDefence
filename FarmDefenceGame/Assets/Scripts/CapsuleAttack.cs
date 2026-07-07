@@ -7,7 +7,7 @@ public class CapsuleAttack : MonoBehaviour
     [SerializeField] private float force = 1f;
     [SerializeField] private float repeatDelay = 3f;
     [SerializeField] private float duration = 10f;
-    [SerializeField] private float strength = 10f; //Damage Strength
+    // [SerializeField] private float strength = 10f; //Damage Strength
     private Soldier soldier;
 
     private float attackTimer;

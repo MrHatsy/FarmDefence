@@ -92,6 +92,7 @@ public class Viking : MonoBehaviour
 
     void takeDamage(Collider2D other)
     {
+
         //take damage when colliding with a projectile
         if (other.gameObject.layer == 10)
         {
