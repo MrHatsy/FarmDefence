@@ -5,6 +5,10 @@ public class Viking : MonoBehaviour
     //params (vars that are set)
 
     [SerializeField] private float speed;
+
+    [SerializeField] private Color damageColor = Color.red;
+    [SerializeField] private float flashTime = 0.1f;
+
     private PointManager myPointManager;
     private SpriteRenderer mySpriteRenderer;
 
@@ -14,12 +18,16 @@ public class Viking : MonoBehaviour
     [SerializeField] private FarmNode target;
     private Vector3 targetPos; // has some randomness so they arent so robotic
 
+    private Color originalColor;
+
     void Start()
     {
         speed *= Random.Range(0.8f, 1.5f);
         setTarget(target);
         myPointManager = FindFirstObjectByType<PointManager>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = mySpriteRenderer.color;
     }
 
     // Update is called once per frame
@@ -97,6 +105,7 @@ public class Viking : MonoBehaviour
         if (other.gameObject.layer == 10)
         {
             hp--;
+            FlashRed();
         }
     }
 
@@ -109,6 +118,17 @@ public class Viking : MonoBehaviour
     public void setHP(int spawnHP)
     {
         hp = spawnHP;
+    }
+
+    void FlashRed()
+    {
+        mySpriteRenderer.color = damageColor;
+        Invoke(nameof(ResetColor), flashTime);
+    }
+
+    void ResetColor()
+    {
+        mySpriteRenderer.color = originalColor;
     }
 
 }
