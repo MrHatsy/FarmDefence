@@ -52,12 +52,23 @@ public class Viking : MonoBehaviour
             }
         }
     }
-    
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == 7 && other.gameObject == target.gameObject)
         {
             target.addViking();
+        }
+
+        takeDamage(other);
+    }
+
+    void takeDamage(Collider2D other)
+    {
+        //take damage when colliding with a projectile
+        if (other.gameObject.layer == 10)
+        {
+            hp--;
         }
     }
 }
