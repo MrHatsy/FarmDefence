@@ -43,8 +43,8 @@ public class VikingSpawner : MonoBehaviour
 
 
         //difficulty scaling
-        spawnRateCurr = spawnRateDefault - myPointManager.ProgessState.get(); //enemies will spawn faster
-        vikingHP = (myPointManager.ProgessState.get() + 1) / 2;
+        spawnRateCurr = spawnRateDefault - myPointManager.ProgessState; //enemies will spawn faster
+        vikingHP = (myPointManager.ProgessState + 1) / 2;
         
     }
 }
