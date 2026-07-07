@@ -204,3 +204,4 @@ MonoBehaviour:
   sprite2: {fileID: 283151135742448952, guid: e4c69490ef8c69a4ebf08c70aca6d1c6, type: 3}
   sprite3: {fileID: 6055469089548957462, guid: ef0a26ad9448b3d47bdb9f52bdf17074, type: 3}
   sprite4: {fileID: -36607725429801198, guid: 70eb69d2ee9708e48b326feef590824a, type: 3}
+  sprite5: {fileID: 1856695507589212177, guid: 36f9addc3a35c3c499b531bdb6bf9314, type: 3}

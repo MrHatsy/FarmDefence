@@ -20,6 +20,7 @@ public class FarmNode : MonoBehaviour
     [SerializeField] private Sprite sprite2;
     [SerializeField] private Sprite sprite3;
     [SerializeField] private Sprite sprite4;
+    [SerializeField] private Sprite sprite5;
 
 
     //properties
@@ -114,8 +115,7 @@ public class FarmNode : MonoBehaviour
 
         if ((float)hp <= (float)hpMax * 0f)
         {
-            mySpriteRenderer.sprite = sprite4;
-            mySpriteRenderer.color = Color.gray;
+            mySpriteRenderer.sprite = sprite5;
         }
         else if ((float)hp <= (float)hpMax * 0.25f)
         {
