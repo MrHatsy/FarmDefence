@@ -7,6 +7,15 @@ public class Soldier : MonoBehaviour
     public float possessionTimer;
     public float possessionDuration = 10f;
 
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+    }
+
     void Update()
     {
         if (!isPossessed) // if im not possessed, ignore.
@@ -21,6 +30,7 @@ public class Soldier : MonoBehaviour
                 PlayerMovement.possessedSoldiers.Remove(this);
             }
             isPossessed = false;
+            spriteRenderer.color = originalColor;
         }
     }
 
@@ -28,5 +38,12 @@ public class Soldier : MonoBehaviour
     {
         isPossessed = true;
         possessionTimer = possessionDuration;
+        spriteRenderer.color = Color.white;
     }
+
+    public void RemovePossession()
+{
+    isPossessed = false;
+    spriteRenderer.color = originalColor;
+}
 }

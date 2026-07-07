@@ -118,7 +118,7 @@ private void HauntSoldier(Soldier newSoldier)
 
     if (possessedSoldiers.Count >= 2) // if ive haunted 2 soldiers
     {
-        possessedSoldiers[0].isPossessed = false; // the first one i haunted deactivates
+        possessedSoldiers[0].RemovePossession();; // the first one i haunted deactivates
         possessedSoldiers.RemoveAt(0); // gets removed from my list
     }
 

@@ -619,21 +619,49 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6497864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8695799
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156137981012728815, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5576326010631431514, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_Name
       value: SoldierMain
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1
+      value: 3.255
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.82
+      value: 4.1542997
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -826,21 +854,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482018165127164413, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2985503239591418954, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_Name
       value: SoldierDistance
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3258789
+      value: -3.398
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0679832
+      value: -1.9419
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -869,6 +913,18 @@ PrefabInstance:
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8999336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7505785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -978,17 +1034,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1067347005246559700, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.93
+      value: -8.1649
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.78
+      value: -3.7144
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1021,6 +1093,18 @@ PrefabInstance:
     - target: {fileID: 6120395393932835065, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_Name
       value: SoldierCapsule (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7236116
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.78161156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1085,17 +1169,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1067347005246559700, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.34
+      value: 5.5742
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.37
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1128,6 +1228,18 @@ PrefabInstance:
     - target: {fileID: 6120395393932835065, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_Name
       value: SoldierCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.88591355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1432,17 +1544,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1067347005246559700, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.93
+      value: 1.0083
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.13
+      value: -2.0061
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 4001611480766193895, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1475,6 +1603,18 @@ PrefabInstance:
     - target: {fileID: 6120395393932835065, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
       propertyPath: m_Name
       value: SoldierCapsule (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7236116
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.78161156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821676940419910308, guid: 7a6a0f4846df57b49bde92bf68c50a4f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1614,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1697,7 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1772,21 +1912,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482018165127164413, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2985503239591418954, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_Name
       value: SoldierDistance (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.21
+      value: -6.3841
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: 1.4623001
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1815,6 +1971,18 @@ PrefabInstance:
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8999336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7505785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2315,21 +2483,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482018165127164413, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2985503239591418954, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_Name
       value: SoldierDistance (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.85
+      value: -0.83462
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 2.8911
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2358,6 +2542,18 @@ PrefabInstance:
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8999336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7505785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2524,21 +2720,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6630473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.88888395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156137981012728815, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5576326010631431514, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_Name
       value: SoldierMain (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.044038
+      value: -5.1769
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.269275
+      value: 3.5841
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2884,21 +3108,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482018165127164413, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2985503239591418954, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_Name
       value: SoldierDistance (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.36
+      value: 5.5949
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: 1.4623001
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.033234
       objectReference: {fileID: 0}
     - target: {fileID: 6230338991276339815, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2931,6 +3171,18 @@ PrefabInstance:
     - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8999336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7505785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441119494475063015, guid: 0de7d581052390e429d33d156cb5023a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3305,21 +3557,49 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6497864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8695799
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425264244784772752, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156137981012728815, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: possessionDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5576326010631431514, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_Name
       value: SoldierMain (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20708
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.71508867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.85
+      value: 4.0316
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41
+      value: -0.22529995
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 2.0375
       objectReference: {fileID: 0}
     - target: {fileID: 7007644211567064271, guid: bd4461c8c0064e8498da01b2e4c02ef5, type: 3}
       propertyPath: m_LocalRotation.w
