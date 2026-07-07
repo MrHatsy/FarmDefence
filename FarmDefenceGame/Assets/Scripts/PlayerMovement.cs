@@ -12,8 +12,10 @@ public class PlayerMovement : MonoBehaviour
     private PlayerActions actions;
     private InputAction movementAction;
     private InputAction interactionAction;
+    private InputAction pauseAction;
     public bool haunted;
     public bool attackActive;
+    public bool movementEnabled;
     public static List<Soldier> nearbySoldiers = new List<Soldier>();
     public static List<Soldier> possessedSoldiers = new List<Soldier>(); // used to count active/haunted soldiers
 
@@ -24,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
         actions = new PlayerActions();
         movementAction = actions.flying.movement;
         interactionAction = actions.flying.interaction;
+        pauseAction = actions.flying.Pause;
+        pauseAction.started += OnPause;
     }
 
      void OnEnable()
@@ -124,6 +128,19 @@ private void HauntSoldier(Soldier newSoldier)
         {
         Soldier s = collision.GetComponent<Soldier>();
         nearbySoldiers.Remove(s); // i forget the previous nearby ghost
+        }
+    }
+
+    private void OnPause(InputAction.CallbackContext context)
+    {
+        movementEnabled = !movementEnabled;
+        if (movementEnabled)
+        {
+            movementAction.Enable();
+        }
+        else
+        {
+            movementAction.Disable();
         }
     }
 }

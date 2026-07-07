@@ -109,6 +109,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""6732d0dd-86a7-44fc-a9b1-02941f1a0847"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -298,6 +307,28 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""003873d5-3ffc-4b47-970a-5e80d23df1c9"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce7f7372-7df9-4d28-87ee-5cbdad68c975"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -308,6 +339,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_flying = asset.FindActionMap("flying", throwIfNotFound: true);
         m_flying_movement = m_flying.FindAction("movement", throwIfNotFound: true);
         m_flying_interaction = m_flying.FindAction("interaction", throwIfNotFound: true);
+        m_flying_Pause = m_flying.FindAction("Pause", throwIfNotFound: true);
     }
 
     ~@PlayerActions()
@@ -390,6 +422,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private List<IFlyingActions> m_FlyingActionsCallbackInterfaces = new List<IFlyingActions>();
     private readonly InputAction m_flying_movement;
     private readonly InputAction m_flying_interaction;
+    private readonly InputAction m_flying_Pause;
     /// <summary>
     /// Provides access to input actions defined in input action map "flying".
     /// </summary>
@@ -409,6 +442,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "flying/interaction".
         /// </summary>
         public InputAction @interaction => m_Wrapper.m_flying_interaction;
+        /// <summary>
+        /// Provides access to the underlying input action "flying/Pause".
+        /// </summary>
+        public InputAction @Pause => m_Wrapper.m_flying_Pause;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -441,6 +478,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @interaction.started += instance.OnInteraction;
             @interaction.performed += instance.OnInteraction;
             @interaction.canceled += instance.OnInteraction;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         /// <summary>
@@ -458,6 +498,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @interaction.started -= instance.OnInteraction;
             @interaction.performed -= instance.OnInteraction;
             @interaction.canceled -= instance.OnInteraction;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         /// <summary>
@@ -512,5 +555,12 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteraction(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPause(InputAction.CallbackContext context);
     }
 }
