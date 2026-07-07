@@ -52,7 +52,26 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         Vector2 input = movementAction.ReadValue<Vector2>();
-        direction = new Vector3(input.x, input.y, 0f);
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+
+        if(screenPos.x < 0 && input.x < 0)
+        {
+            input.x = 0;
+        }
+
+        else if(screenPos.x > Screen.width && input.x > 0)
+        {
+            input.x = 0;
+        }
+        if(screenPos.y < 0 && input.y < 0)
+        {
+            input.y = 0;
+        }
+        else if(screenPos.y > Screen.height && input.y > 0)
+        {
+            input.y = 0;
+        }
+            direction = new Vector3(input.x, input.y, 0f);
         transform.Translate(direction * currentSpeed * Time.deltaTime, Space.World);
     }
 
