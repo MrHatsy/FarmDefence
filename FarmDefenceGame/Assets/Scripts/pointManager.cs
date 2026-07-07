@@ -10,6 +10,8 @@ public class PointManager : MonoBehaviour
     [SerializeField] private Sprite sprite3;
     [SerializeField] private Sprite sprite4;
 
+    [SerializeField] private GameObject WinPanel;
+
     //changings
     private int points;
     private static int progessState = 1;
@@ -43,9 +45,8 @@ public class PointManager : MonoBehaviour
         if (progessState >= 5)
         {
             //TODO
-            //WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN
-            //WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN//WIN
-            //WIN
+            WinPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

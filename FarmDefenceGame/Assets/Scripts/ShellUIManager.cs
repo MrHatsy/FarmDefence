@@ -15,6 +15,8 @@ public class ShellUIManager : MonoBehaviour
 
     [SerializeField] private GameObject pausePanel;
 
+    [SerializeField] private GameObject winPanel;
+
     static private ShellUIManager instance;
     static public ShellUIManager Instance
     {
