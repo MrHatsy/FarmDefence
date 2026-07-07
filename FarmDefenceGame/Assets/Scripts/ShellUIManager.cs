@@ -77,6 +77,7 @@ public class ShellUIManager : MonoBehaviour
     {
         OnLevelPause?.Invoke();
         isPaused = true;
+        Time.timeScale = 0f;
         pausePanel.SetActive(true);
     }
 
@@ -84,6 +85,7 @@ public class ShellUIManager : MonoBehaviour
     {
         OnLevelUnPause?.Invoke();
         isPaused = false;
+        Time.timeScale = 1f;
         pausePanel.SetActive(false);
     }
 
