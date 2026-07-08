@@ -36,7 +36,7 @@ public class Attack : MonoBehaviour
             return;
         }
 
-    Vector3 nextScale = attack.localScale + Vector3.one * 0.008f; // gradually grow the attack, last condition chnages speed)
+    Vector3 nextScale = attack.localScale + Vector3.one * 0.02f; // gradually grow the attack, last condition chnages speed)
     attack.localScale = Vector3.Min(nextScale, maxScale);
 
     if (nextScale.x >= maxScale.x) // if the attack is at its max size
