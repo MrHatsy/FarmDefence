@@ -104,8 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1229071885aebfb4e94c123288d767e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointManager
-  pointMilestone: 45
+  pointMilestone: 35
   sprite1: {fileID: -4016821711247419400, guid: 535f408f634115940ba7dd8a28b4c7d5, type: 3}
   sprite2: {fileID: 5253985385528481924, guid: 79898f15f42c7ac44be5bb6e5048eb82, type: 3}
   sprite3: {fileID: -5199515706832916427, guid: 87dd7039bba97b844a8b06c29934d529, type: 3}
   sprite4: {fileID: -1997323404290254113, guid: 404cb33d6733837458a9f037199f03cf, type: 3}
+  WinPanel: {fileID: 0}
+  LosePanel: {fileID: 0}

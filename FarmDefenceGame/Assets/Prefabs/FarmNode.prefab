@@ -198,7 +198,7 @@ MonoBehaviour:
   timerMax: 2
   nextNode: {fileID: 0}
   verticalFarm: 0
-  hpMax: 120
+  hpMax: 180
   alive: 0
   sprite1: {fileID: -4150543317946932746, guid: 325b7e066bac8ba4286c07486e8814e1, type: 3}
   sprite2: {fileID: 283151135742448952, guid: e4c69490ef8c69a4ebf08c70aca6d1c6, type: 3}

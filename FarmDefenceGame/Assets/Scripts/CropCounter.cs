@@ -16,6 +16,6 @@ public class CropCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cropCounter.text = string.Format("Crops: {0} / 180", myPointManager.Points);
+        cropCounter.text = string.Format("Crops: {0} / 140", myPointManager.Points);
     }
 }
