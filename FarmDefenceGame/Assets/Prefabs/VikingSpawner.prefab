@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9171e0cc336fc314c828c0df7d47fedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  spawnRateDefault: 10
+  spawnRateDefault: 12
   target: {fileID: 0}
   vikingPrefab: {fileID: 7302842908267939607, guid: 6ce9a5a77dd643446867e8ac96b003f0, type: 3}
-  vikingHPDefault: 3
+  vikingHPDefault: 2
